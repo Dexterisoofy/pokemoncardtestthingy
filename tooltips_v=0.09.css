@@ -1,0 +1,264 @@
+/* Tippy Content CSS */
+div[data-tippy-root][id^="tippy-"] {
+    z-index: 999999999999999999999999999 !important;
+}
+
+.tippy-box[data-theme="deck-preview"] {
+    border: 2px solid #3466ae;
+    border-radius: 5px;
+}
+
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-maindeck-cards,
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-extra-cards,
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-side-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: left;
+    align-items: start;
+    border: 1px solid #3466ae;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #30211a;
+}
+
+.tippy-box[data-theme="deck-preview"] .deck-preview-full-width {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.tippy-box[data-theme="deck-preview"] .deck-preview-half-width {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-maindeck-cards img {
+    width: 44px;
+    height: 61.66px;
+    overflow: hidden;
+}
+
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-extra-cards img,
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-side-cards img {
+    width: 44px;
+    height: 67px;
+    overflow: hidden;
+}
+
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-two-column {
+    display: flex;
+}
+
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-full-width {
+    width: 100%;
+}
+
+.tippy-box[data-theme="deck-preview"] .quantity-badge {
+    color: white;
+    width: 28px;
+    z-index: 1;
+    border-radius: 50%;
+    font-style: italic;
+    text-align: center;
+    border: 1px solid #3466ae;
+    background-color: #3466ae;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-title,
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-extra-title,
+.tippy-box[data-theme="deck-preview"] .deck-preview-tooltip-side-title {
+    margin-left: 5px;
+}
+
+.tippy-box[data-theme="card-preview"] {
+    border: 2px solid #3466ae;
+    border-radius: 5px;
+}
+
+.tippy-box[data-theme="card-preview"] .card-preview-tooltip {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tippy-box[data-theme="card-preview"] .tooltip-card {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    align-items: start;
+    border-radius: 12px;
+}
+
+.tooltip-card-full {
+    width: 280px;
+    height: auto;
+    margin-right: auto;
+    margin-left:auto;
+    text-align: center;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .tippy-box[data-theme="card-preview"] .tooltip-card {
+        width: 100px;
+    }
+
+    .tooltip-card-full {
+        width: 200px;
+    }
+}
+
+.tippy-box[data-theme="card-preview"] .card-preview-tooltip-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.tippy-box[data-theme="card-preview"] .card-preview-tooltip-text {
+    margin-bottom: 5px;
+}
+
+.tippy-box[data-theme="card-preview"] .tooltip-card-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .tippy-box[data-theme="card-preview"] .tooltip-card-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .tippy-box[data-theme="card-preview"] {
+        font-size: 0.7rem;
+    }
+}
+
+.tippy-box[data-theme="card-preview"] .card-preview-header .card-preview-tooltip-title {
+    font-weight: bold;
+}
+
+.tippy-box[data-theme="card-preview"] .tooltip-ban-status {
+    margin-right: 10px;
+}
+
+.tippy-box[data-theme="card-preview"] .card-preview-tooltip-footer {
+    align-self: flex-end; /* Ensures footer is always at the bottom */
+}
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip {
+    max-width: 360px;
+    min-width: 360px;
+}
+
+.tippy-box[data-theme="user-preview"] .user-item img{
+    justify-content: left;
+    text-align: left !important;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tippy-box[data-theme="user-preview"] .user-item img{
+    justify-content: left;
+    text-align: left !important;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 15px;
+    font-size: 1.2em;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 20px;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip-bio{
+    font-size: 0.9em;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip-color-override{
+    color: #e27e36 !important;
+}
+
+.tippy-box[data-theme="user-preview"] .fa {
+    padding: unset !important;
+    font-size: unset !important;
+    width: unset !important;
+    text-align: unset !important;
+    text-decoration: unset !important;
+    margin: unset !important;
+    border-radius: unset !important;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip {
+    max-width: 360px;
+    min-width: 360px;
+}
+
+.tippy-box[data-theme="user-preview"] .user-item img{
+    justify-content: left;
+    text-align: left !important;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tippy-box[data-theme="user-preview"] .user-item img{
+    justify-content: left;
+    text-align: left !important;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 15px;
+    font-size: 1.2em;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 20px;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip-bio{
+    font-size: 0.9em;
+}
+
+.tippy-box[data-theme="user-preview"] .user-preview-tooltip-color-override{
+    color: #3466af !important;
+}
+
+.tippy-box[data-theme="user-preview"] .fa {
+    padding: unset !important;
+    font-size: unset !important;
+    width: unset !important;
+    text-align: unset !important;
+    text-decoration: unset !important;
+    margin: unset !important;
+    border-radius: unset !important;
+}
+/* End Tippy Content CSS */

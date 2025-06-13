@@ -1,0 +1,641 @@
+.card-bg{
+    background: url(../../../images.pokemoncard.io/images/assets/login/bg-login.svg);
+    background-repeat: no-repeat;
+}
+.card-quantity-overlay {
+    position: absolute;
+    right: 0px;
+    bottom: 55px;
+    background: rgb(0 0 0 / 70%);
+    padding: 5px;
+    border-radius: 1px;
+    color: white;
+}
+.card-flex-container{
+    content: "";
+    flex: auto;
+}
+.customPackFigure {
+    display: inline-block;
+}
+.info-pack-views {
+    float: right;
+}
+.pack-img-container {
+    cursor: pointer;
+    position: relative;
+}
+.packinfo-icon {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    color: var(--primary);
+    font-size: 1.5em;
+}
+.packinfo-icon2 {
+    color: var(--primary);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.info-pack-heading {
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 1.1em;
+    display: block;
+}
+.info-pack-cardimg img {
+    width: 90px;
+    margin: 5px;
+}
+.info-pack-packname {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.msg-art {
+    font-size: 12px;
+    font-style: italic;
+}
+.user-meta a{
+    colorvar(--primary);
+}
+.user-meta,.user-meta2 {
+    text-align: center;
+    display:none;
+    margin-top: 10px;
+}
+.logged-collection {
+    text-align: center;
+    margin-top: 15px;
+}
+.card-Ghost-Rare {
+    color: #7fb5db;
+    font-weight: 700;
+}
+.card-Ultra-Rare {
+    color: #24ba59;
+    font-weight: 700;
+}
+.card-Ultimate-Rare {
+    color: #ff4903;
+    font-weight: 700;
+}
+.card-Secret-Rare {
+    color: #c2792e;
+    font-weight: 700;
+}
+.card-Super-Rare {
+    color: #769b3c;
+    font-weight: 700;
+}
+.card-Rare {
+    color: #4c4c97;
+    font-weight: 700;
+}
+.card-set-link {
+    display: block;
+}
+#draft-mode-area {
+    text-align: center;
+}
+.draftimg {
+    height: 254px;
+    width: 177px;
+    margin: 2px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+#submitmsg {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#uploadPack, #uploadPackDraft{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+.format-button-sets:hover {
+    background-color: #147686;
+    transition: transform .5s ease;
+    transform: scale(1.05);
+}
+.flip-meta-name {
+    margin-top: 3px;
+}
+.flip-meta, .flip-meta-name {
+    display: block;
+    font-size: 13px;
+}
+.opened-cards-after {
+    margin-top: 25px;
+}
+figure img {
+
+    transition: all .2s ease;
+}
+.rare-card:after {
+
+    animation: shine 3s ease-in-out  infinite;
+    animation-fill-mode: forwards;
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 170%;
+    opacity: 0;
+    transform: rotate(30deg);
+
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0.0) 100%
+    );
+}
+
+
+.rare-card {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+/**
+ * The "shine" element
+ */
+
+.rare-card:after {
+
+    animation: shine 2s ease-in-out  infinite;
+    animation-fill-mode: forwards;
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 170%;
+    opacity: 0;
+    transform: rotate(30deg);
+
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0.0) 100%
+    );
+}
+
+/* Hover state - trigger effect */
+
+
+/* Active state */
+
+.rare-card:active:after {
+    opacity: 0;
+}
+
+@keyframes shine{
+    10% {
+        opacity: 1;
+        top: -30%;
+        left: -30%;
+        transition-property: left, top, opacity;
+        transition-duration: 0.9s, 0.9s, 0.17s;
+        transition-timing-function: ease;
+    }
+    100% {
+        opacity: 0;
+        top: -30%;
+        left: -30%;
+        transition-property: left, top, opacity;
+    }
+}
+
+.format-button {
+    background-color: var(--primary);
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.pack-select {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 400px;
+    font-weight: bold;
+}
+.format-button-sets {
+    background-color: var(--primary);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    height: 400px;
+    width: 200px;
+    border-radius: 7px;
+}
+.set-text {
+    display: block;
+    padding-top: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.set-name {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.flip-box {
+    background-color: transparent;
+    width: 177px;
+    height: 254px;
+    perspective: 1000px;
+    display: inline-block;
+    margin: 20px;
+    margin-bottom: 45px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/*
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+*/
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    webkit-backface-visibility: hidden;
+}
+
+.flip-box-back {
+    transform: rotateY(180deg);
+}
+
+#opened-cards {
+    text-align: center;
+    min-height: 328px;
+}
+
+@media screen and (max-width: 580px) {
+    .flip-box, .flip-box img{
+        height: 178px !important;
+        width: 124px !important;
+    }
+    .flip-box{
+        margin: 5px !important;
+        margin-bottom: 50px !important;
+    }
+    .score-meta{
+        font-size: 11px !important;
+    }
+    .add-builder{
+        font-size: 16px !important;
+    }
+    .format-button-sets{
+        height: 170px !important;
+        width: 120px !important;
+    }
+    .format-button-sets img{
+        height: 113px !important;
+        width: 76.13px !important;
+        min-width: unset !important;
+        object-fit: contain;
+    }
+    .set-text{
+        font-size: 9px !important;
+    }
+    .flip-meta, .flip-meta-name {
+        font-size: 13px;
+    }
+}
+
+.chaosdraftcount {
+    margin-left: 5px;
+}
+.chaosdrafttext{
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1.1em;
+}
+.chaosdraft-list {
+    border: 1px solid #00000042;
+    border-radius: 10px;
+    padding: 10px;
+}
+.chaosdraft-listul{
+    padding-left:0px;
+}
+.chaosdraft-listul li {
+    display: inline-block;
+    margin: 5px;
+}
+.chaoslist-img {
+    width: 95px;
+}
+.chaosdraft-info{
+    display:none;
+}
+.add-builder {
+    margin-right: 5px;
+    cursor: pointer;
+    color: var(--primary);
+    display:none;
+}
+#CustomDraftArea{
+    overflow-y: scroll;
+}
+.w3-top a:hover{
+    text-decoration: none;
+}
+.search-icon-main {
+    position: absolute;
+    left: 15px;
+    height: 24px;
+    top: -10px;
+    border-radius: 15px;
+    opacity: .95;
+}
+span.meta-desc-header {
+    display: block;
+}
+span.meta-desc {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+span.meta-desc a, .login-prompt a{
+    color: var(--primary);
+}
+.user-meta-home {
+    margin: 15px;
+}
+.login-prompt {
+    margin: 15px;
+}
+.container{
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 1rem;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#pack-select {
+    min-height: 400px;
+}
+.customdraft_auto {
+    display: block;
+    font-style: italic;
+    font-size: 0.9em;
+}
+.customdraftimage {
+    object-fit: contain;
+    width: 100px;
+}
+#customdraft_error {
+    text-align: center;
+    color: #CC0000;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.customdraftlist {
+    list-style: none;
+    padding-left: 0px;
+
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(170px,1fr));
+    grid-gap: 10px;
+    text-align:center;
+}
+.region-msg {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.resources p {
+    margin-bottom: 10px;
+}
+.resources {
+    margin-top: 25px;
+}
+.card-area:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.card-area {
+    margin-top: 30px;
+}
+#item-area {
+    margin-top: 5px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.item-img {
+    float: left;
+    padding-right: 20px;
+    max-width: 240px;
+    min-width: 240px;
+    text-align: center;
+}
+.item-img img {
+    max-width: 140px;
+    width: 140px;
+    object-fit: contain;
+}
+.item-misc {
+    padding-bottom: 5px;
+    display: block;
+}
+.item-desc p {
+    overflow: hidden;
+}
+input#filter-dq {
+    margin-bottom: 15px;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input#filter-dq2 {
+    margin-bottom: 15px;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 480px) {
+    .card-name h1 {
+        font-size: 28px;
+    }
+    .dp-text{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .item-img, .item-name {
+        float:none;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+.rare{
+    color: #4c4c97;
+}
+.superrare{
+    color: #769b3c;
+}
+.secretrare{
+    color: #c2792e;
+}
+.ultrarare{
+    color: #24ba59;
+}
+.pulled-card{
+    width: 100px;
+}
+.pulled-card-row {
+    width: 100%;
+    max-width: 100px;
+}
+.pack-num-input{
+    border: none;
+    border-radius: 1px;
+    box-shadow: inset 1px 2px 2px rgb(0 0 0 / 25%);
+    font-family: Inter,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    height: 30px;
+    letter-spacing: -.05em;
+    margin-left: 5px;
+    width: 48px;
+    text-align: center;
+}
+#float-menu-item{
+    cursor: pointer;
+}
+.float-menu-open {
+    right: -120px !important;
+}
+#selected-packs-area{
+    /* Div needs to float at the bottom right of the screen */
+    right: 0;
+    bottom: 20px;
+    box-shadow: -2px 2px 2px rgb(0 0 0 / 15%);
+    height: 280px;
+    padding-right: 5px;
+    position: fixed;
+    transition: right .2s ease-out;
+    width: 160px;
+    background-color: rgb(248 248 248 / 50%);
+    font-size: 0.8em;
+    z-index: 9999999;
+}
+#selected-packs{
+    /* Vertical overflow scroll */
+    height: 150px;
+    overflow-y: auto;
+}
+#pack-sim-area{
+    min-height: 328px;
+}
+.flip-box{
+    width: 160.45px;
+    height: 234px;
+    cursor: pointer;
+}
+.flip-meta-name{
+    font-weight: bold;
+}
+.card-style{
+    border-radius: 4px;
+    border: 1px solid #000000b0;
+    width: 160.45px;
+    height: 234px;
+}
+.set-title, .set-text{
+    font-size: 0.8em;
+}
+.set-title{
+    font-weight: bold;
+}
+.card-img-top {
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+.pack-selection-card{
+    width: 205px;
+    height: 380px;
+}
+/* When screen width is 768px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 768px) {
+    #selected-packs-area{
+        background-color: rgb(248 248 248 / 80%);
+    }
+    #pulled-card-rowparent{
+        justify-content: center !important;
+    }
+    .pulled-card-row {
+        max-width: 70px;
+    }
+    .pulled-card {
+        width: 70px;
+    }
+    .pack-selection-card{
+        width: 175px;
+        height: 300px;
+    }
+    .card-img-top {
+        width: 100px;
+        height: 150px;
+    }
+}
